@@ -36,7 +36,7 @@ I utilize a deep neural network architecture, [AltFreezing](https://github.com/Z
 
 **Dataset**
 
-* **FaceForensics:** This dataset contains a large collection of real and fake videos, providing a rich source of training data: [AltFreezing](https://github.com/ondyari/FaceForensics)
+* **FaceForensics:** This dataset contains a large collection of real and fake videos, providing a rich source of training data: [FaceForensics++](https://github.com/ondyari/FaceForensics)
 
 **Evaluation**
 

@@ -1,4 +1,4 @@
-# CS229 Machine Learning by Andrew Ng
+# CS229 Machine Learning with Andrew Ng
 
 
 # Enhancing Video Conference Deepfake Detection: Domain Adaptation of AltFreezing with Adversarial Training
@@ -20,11 +20,10 @@ https://youtu.be/PYhsdQp6KhM
 - AltFreezing
 
 
-# Facial Deepfake Detection
 
-**Project Overview**
+## Project Overview ##
 
-This project aims to detect deepfake videos using a state-of-the-art deep learning model. I leverage my own dataset and the FaceForensics dataset for training and evaluation.
+This project aims to detect deepfake videos in video conferences using a customized SOTA deep learning model. I leverage my own dataset and the FaceForensics dataset for training and evaluation.
 
 
 
@@ -44,10 +43,7 @@ I utilize a deep neural network architecture, [AltFreezing](https://github.com/Z
 The model is evaluated on a held-out test set from the FaceForensics dataset and my custom dataset, measuring its accuracy in detecting deepfake videos.
 
 
-
-
-
-## Run Experiments
+## To Run Experiments
 
 To perform supervise fine-tuning:
 

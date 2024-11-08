@@ -3,7 +3,7 @@
 
 # 
 
-# EEnhancing Video Conference Deepfake Detection: Domain Adaptation of AltFreezing with Adversarial Training
+# Enhancing Video Conference Deepfake Detection: Domain Adaptation of AltFreezing with Adversarial Training
 
 ## Paper
 https://github.com/csbrendan/CS229/blob/main/paper/CS229_Project.pdf

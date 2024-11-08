@@ -56,7 +56,7 @@ To perform supervise fine-tuning:
 3. **Model Training:**
    * Fine-tune the model on a custom augmented dataset:
      ```bash
-     python ft_augment.py
+     python finetune_augment.py
      ```
    * Or, fine-tune the model on a custom dataset without augmentation:
      ```bash

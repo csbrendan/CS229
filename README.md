@@ -32,26 +32,11 @@ This project aims to detect deepfake videos using a state-of-the-art deep learni
 
 * **FaceForensics:** This dataset contains a large collection of real and fake videos, providing a rich source of training data.
 
-**Model Architecture**
+## Attribution and Model Architecture
 
-We utilize a deep neural network architecture, inspired by [AltFreezing](https://github.com/ZhendongWang6/AltFreezing), to extract relevant features from video frames. The model is fine-tuned on a custom dataset to improve performance.
+I utilize a deep neural network architecture, [AltFreezing](https://github.com/ZhendongWang6/AltFreezing), to extract relevant features from video frames. The model is fine-tuned on custom datasets for adaptation and to improve performance.
 
-**Training and Fine-tuning**
 
-1. **Data Preparation:**
-   * Download and process the FaceForensics dataset using the provided script:
-     ```bash
-     python faceforensics_download_v4.py
-     ```
-2. **Model Training:**
-   * Fine-tune the model on a custom augmented dataset:
-     ```bash
-     python ft_augment.py
-     ```
-   * Or, fine-tune the model on a custom dataset without augmentation:
-     ```bash
-     python finetune_custom_data.py
-     ```
 
 **Evaluation**
 
@@ -83,12 +68,20 @@ https://huggingface.co/datasets/qiaojin/PubMedQA
 
 To perform supervise fine-tuning:
 
-python biomistral_qa_context_sft.py  -> creates SFT model (data/biomistral-7b-sft-pqa-context-lora)
-
-biomistral_qa_context_sft_gen_answers.py -> generates answers to be used in DPO step: sft_pqa_context_inference_results.json
-
-biomistral_qa_context_dpo.py -> creates DPO model (data/biomistral-7b-dpo-pqa-context-lora)
-
-biomistral_dpo_context_gen_answers.py -> generates answers to be used in Eval: dpo_inference_pqa_context_results.json
+1. **Data Preparation:**
+2. 
+   * Download and process the FaceForensics dataset using the provided script:
+     ```bash
+     python faceforensics_download_v4.py
+     ```
+3. **Model Training:**
+   * Fine-tune the model on a custom augmented dataset:
+     ```bash
+     python ft_augment.py
+     ```
+   * Or, fine-tune the model on a custom dataset without augmentation:
+     ```bash
+     python finetune_custom_data.py
+     ```
 
 

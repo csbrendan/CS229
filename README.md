@@ -1,7 +1,7 @@
 # CS229 Machine Learning with Andrew Ng
 
 
-# Enhancing Video Conference Deepfake Detection: Domain Adaptation of AltFreezing with Adversarial Training
+# Adapting Deepfake Detection to Video Conferencing: Domain-Specific Augmentation and Targeted Model Fine-tuning
 
 ## Paper
 https://github.com/csbrendan/CS229/blob/main/paper/CS229_Project.pdf
@@ -17,7 +17,9 @@ https://youtu.be/PYhsdQp6KhM
 - Nvidia A100
 - PyTorch
 - FaceForensics++
+- Celebrity Deepfake
 - AltFreezing
+- Deep Live Cam
 
 
 

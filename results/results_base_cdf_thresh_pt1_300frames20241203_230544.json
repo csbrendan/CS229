@@ -1,0 +1,817 @@
+{
+    "metadata": {
+        "timestamp": "2024-12-03T23:05:44.238038",
+        "threshold": 0.1,
+        "total_videos": 100,
+        "successful_videos": 100,
+        "real_directory": "/home/azureuser/CelebDF/Celeb-real",
+        "fake_directory": "/home/azureuser/CelebDF/Celeb-synthesis"
+    },
+    "video_results": [
+        {
+            "filename": "id10_0000.mp4",
+            "mean_prediction": 0.17109289738492897,
+            "classification_error": 0.07109289738492897,
+            "ground_truth": false,
+            "predicted_fake": true,
+            "correct_prediction": false
+        },
+        {
+            "filename": "id0_id21_0001.mp4",
+            "mean_prediction": 0.39081837174562273,
+            "classification_error": 0.29081837174562275,
+            "ground_truth": true,
+            "predicted_fake": true,
+            "correct_prediction": true
+        },
+        {
+            "filename": "id10_0003.mp4",
+            "mean_prediction": 0.039894145958430265,
+            "classification_error": 0.06010585404156974,
+            "ground_truth": false,
+            "predicted_fake": false,
+            "correct_prediction": true
+        },
+        {
+            "filename": "id13_0001.mp4",
+            "mean_prediction": 0.07522517074588478,
+            "classification_error": 0.024774829254115227,
+            "ground_truth": false,
+            "predicted_fake": false,
+            "correct_prediction": true
+        },
+        {
+            "filename": "id0_id1_0000.mp4",
+            "mean_prediction": 0.7185733907174,
+            "classification_error": 0.6185733907174,
+            "ground_truth": true,
+            "predicted_fake": true,
+            "correct_prediction": true
+        },
+        {
+            "filename": "id0_id17_0000.mp4",
+            "mean_prediction": 0.6118518162006339,
+            "classification_error": 0.5118518162006339,
+            "ground_truth": true,
+            "predicted_fake": true,
+            "correct_prediction": true
+        },
+        {
+            "filename": "id11_0009.mp4",
+            "mean_prediction": 0.12207689833893098,
+            "classification_error": 0.022076898338930978,
+            "ground_truth": false,
+            "predicted_fake": true,
+            "correct_prediction": false
+        },
+        {
+            "filename": "id13_0010.mp4",
+            "mean_prediction": 0.2365234578547646,
+            "classification_error": 0.1365234578547646,
+            "ground_truth": false,
+            "predicted_fake": true,
+            "correct_prediction": false
+        },
+        {
+            "filename": "id0_0007.mp4",
+            "mean_prediction": 0.229279850493618,
+            "classification_error": 0.12927985049361798,
+            "ground_truth": false,
+            "predicted_fake": true,
+            "correct_prediction": false
+        },
+        {
+            "filename": "id10_0007.mp4",
+            "mean_prediction": 0.210607809883622,
+            "classification_error": 0.11060780988362198,
+            "ground_truth": false,
+            "predicted_fake": true,
+            "correct_prediction": false
+        },
+        {
+            "filename": "id0_id17_0006.mp4",
+            "mean_prediction": 0.25676792058885983,
+            "classification_error": 0.15676792058885983,
+            "ground_truth": true,
+            "predicted_fake": true,
+            "correct_prediction": true
+        },
+        {
+            "filename": "id11_0007.mp4",
+            "mean_prediction": 0.18395867009671427,
+            "classification_error": 0.08395867009671426,
+            "ground_truth": false,
+            "predicted_fake": true,
+            "correct_prediction": false
+        },
+        {
+            "filename": "id0_id17_0002.mp4",
+            "mean_prediction": 0.7152968371965572,
+            "classification_error": 0.6152968371965573,
+            "ground_truth": true,
+            "predicted_fake": true,
+            "correct_prediction": true
+        },
+        {
+            "filename": "id0_id1_0007.mp4",
+            "mean_prediction": 0.5137020827991174,
+            "classification_error": 0.41370208279911747,
+            "ground_truth": true,
+            "predicted_fake": true,
+            "correct_prediction": true
+        },
+        {
+            "filename": "id0_id16_0005.mp4",
+            "mean_prediction": 0.37677600467058253,
+            "classification_error": 0.2767760046705825,
+            "ground_truth": true,
+            "predicted_fake": true,
+            "correct_prediction": true
+        },
+        {
+            "filename": "id0_id16_0002.mp4",
+            "mean_prediction": 0.542419144613703,
+            "classification_error": 0.442419144613703,
+            "ground_truth": true,
+            "predicted_fake": true,
+            "correct_prediction": true
+        },
+        {
+            "filename": "id0_id23_0004.mp4",
+            "mean_prediction": 0.639596886828985,
+            "classification_error": 0.539596886828985,
+            "ground_truth": true,
+            "predicted_fake": true,
+            "correct_prediction": true
+        },
+        {
+            "filename": "id12_0003.mp4",
+            "mean_prediction": 0.6603219548593445,
+            "classification_error": 0.5603219548593446,
+            "ground_truth": false,
+            "predicted_fake": true,
+            "correct_prediction": false
+        },
+        {
+            "filename": "id0_id23_0007.mp4",
+            "mean_prediction": 0.889333093531956,
+            "classification_error": 0.789333093531956,
+            "ground_truth": true,
+            "predicted_fake": true,
+            "correct_prediction": true
+        },
+        {
+            "filename": "id0_id20_0006.mp4",
+            "mean_prediction": 0.5884538176209843,
+            "classification_error": 0.4884538176209843,
+            "ground_truth": true,
+            "predicted_fake": true,
+            "correct_prediction": true
+        },
+        {
+            "filename": "id12_0004.mp4",
+            "mean_prediction": 0.33650759606514835,
+            "classification_error": 0.23650759606514835,
+            "ground_truth": false,
+            "predicted_fake": true,
+            "correct_prediction": false
+        },
+        {
+            "filename": "id0_id21_0006.mp4",
+            "mean_prediction": 0.4845908764320457,
+            "classification_error": 0.3845908764320457,
+            "ground_truth": true,
+            "predicted_fake": true,
+            "correct_prediction": true
+        },
+        {
+            "filename": "id12_0001.mp4",
+            "mean_prediction": 0.403061716955806,
+            "classification_error": 0.30306171695580597,
+            "ground_truth": false,
+            "predicted_fake": true,
+            "correct_prediction": false
+        },
+        {
+            "filename": "id0_id21_0009.mp4",
+            "mean_prediction": 0.5414172682121784,
+            "classification_error": 0.4414172682121784,
+            "ground_truth": true,
+            "predicted_fake": true,
+            "correct_prediction": true
+        },
+        {
+            "filename": "id0_id20_0002.mp4",
+            "mean_prediction": 0.7687902558996553,
+            "classification_error": 0.6687902558996554,
+            "ground_truth": true,
+            "predicted_fake": true,
+            "correct_prediction": true
+        },
+        {
+            "filename": "id0_id1_0009.mp4",
+            "mean_prediction": 0.6018656030449615,
+            "classification_error": 0.5018656030449615,
+            "ground_truth": true,
+            "predicted_fake": true,
+            "correct_prediction": true
+        },
+        {
+            "filename": "id0_id21_0004.mp4",
+            "mean_prediction": 0.6002502255834168,
+            "classification_error": 0.5002502255834168,
+            "ground_truth": true,
+            "predicted_fake": true,
+            "correct_prediction": true
+        },
+        {
+            "filename": "id13_0003.mp4",
+            "mean_prediction": 0.34209164634578926,
+            "classification_error": 0.24209164634578925,
+            "ground_truth": false,
+            "predicted_fake": true,
+            "correct_prediction": false
+        },
+        {
+            "filename": "id10_0005.mp4",
+            "mean_prediction": 0.22677891891186566,
+            "classification_error": 0.12677891891186566,
+            "ground_truth": false,
+            "predicted_fake": true,
+            "correct_prediction": false
+        },
+        {
+            "filename": "id13_0004.mp4",
+            "mean_prediction": 0.11470544352594306,
+            "classification_error": 0.014705443525943052,
+            "ground_truth": false,
+            "predicted_fake": true,
+            "correct_prediction": false
+        },
+        {
+            "filename": "id0_0001.mp4",
+            "mean_prediction": 0.11274418466270912,
+            "classification_error": 0.012744184662709115,
+            "ground_truth": false,
+            "predicted_fake": true,
+            "correct_prediction": false
+        },
+        {
+            "filename": "id0_id17_0005.mp4",
+            "mean_prediction": 0.3290786354570584,
+            "classification_error": 0.2290786354570584,
+            "ground_truth": true,
+            "predicted_fake": true,
+            "correct_prediction": true
+        },
+        {
+            "filename": "id0_0006.mp4",
+            "mean_prediction": 0.07277515986899682,
+            "classification_error": 0.02722484013100318,
+            "ground_truth": false,
+            "predicted_fake": false,
+            "correct_prediction": true
+        },
+        {
+            "filename": "id0_id17_0009.mp4",
+            "mean_prediction": 0.541053813189739,
+            "classification_error": 0.441053813189739,
+            "ground_truth": true,
+            "predicted_fake": true,
+            "correct_prediction": true
+        },
+        {
+            "filename": "id12_0005.mp4",
+            "mean_prediction": 0.07456305103469986,
+            "classification_error": 0.025436948965300146,
+            "ground_truth": false,
+            "predicted_fake": false,
+            "correct_prediction": true
+        },
+        {
+            "filename": "id0_0005.mp4",
+            "mean_prediction": 0.04103615854392486,
+            "classification_error": 0.058963841456075146,
+            "ground_truth": false,
+            "predicted_fake": false,
+            "correct_prediction": true
+        },
+        {
+            "filename": "id0_id16_0006.mp4",
+            "mean_prediction": 0.17263014669976712,
+            "classification_error": 0.07263014669976711,
+            "ground_truth": true,
+            "predicted_fake": true,
+            "correct_prediction": true
+        },
+        {
+            "filename": "id0_id16_0004.mp4",
+            "mean_prediction": 0.2888596028671167,
+            "classification_error": 0.1888596028671167,
+            "ground_truth": true,
+            "predicted_fake": true,
+            "correct_prediction": true
+        },
+        {
+            "filename": "id0_id1_0006.mp4",
+            "mean_prediction": 0.6205228184346373,
+            "classification_error": 0.5205228184346373,
+            "ground_truth": true,
+            "predicted_fake": true,
+            "correct_prediction": true
+        },
+        {
+            "filename": "id0_id21_0005.mp4",
+            "mean_prediction": 0.4364838441729989,
+            "classification_error": 0.3364838441729989,
+            "ground_truth": true,
+            "predicted_fake": true,
+            "correct_prediction": true
+        },
+        {
+            "filename": "id12_0000.mp4",
+            "mean_prediction": 0.11639862954027978,
+            "classification_error": 0.016398629540279777,
+            "ground_truth": false,
+            "predicted_fake": true,
+            "correct_prediction": false
+        },
+        {
+            "filename": "id10_0001.mp4",
+            "mean_prediction": 0.47577048914733333,
+            "classification_error": 0.37577048914733335,
+            "ground_truth": false,
+            "predicted_fake": true,
+            "correct_prediction": false
+        },
+        {
+            "filename": "id0_0009.mp4",
+            "mean_prediction": 0.16878980351092648,
+            "classification_error": 0.06878980351092648,
+            "ground_truth": false,
+            "predicted_fake": true,
+            "correct_prediction": false
+        },
+        {
+            "filename": "id0_id20_0005.mp4",
+            "mean_prediction": 0.4518161536502517,
+            "classification_error": 0.35181615365025165,
+            "ground_truth": true,
+            "predicted_fake": true,
+            "correct_prediction": true
+        },
+        {
+            "filename": "id0_id23_0001.mp4",
+            "mean_prediction": 0.5200145681454458,
+            "classification_error": 0.4200145681454458,
+            "ground_truth": true,
+            "predicted_fake": true,
+            "correct_prediction": true
+        },
+        {
+            "filename": "id0_id16_0007.mp4",
+            "mean_prediction": 0.5161594148295963,
+            "classification_error": 0.4161594148295963,
+            "ground_truth": true,
+            "predicted_fake": true,
+            "correct_prediction": true
+        },
+        {
+            "filename": "id13_0011.mp4",
+            "mean_prediction": 0.16909027904389792,
+            "classification_error": 0.06909027904389792,
+            "ground_truth": false,
+            "predicted_fake": true,
+            "correct_prediction": false
+        },
+        {
+            "filename": "id11_0000.mp4",
+            "mean_prediction": 0.18127110583211464,
+            "classification_error": 0.08127110583211464,
+            "ground_truth": false,
+            "predicted_fake": true,
+            "correct_prediction": false
+        },
+        {
+            "filename": "id0_0000.mp4",
+            "mean_prediction": 0.31212503043761597,
+            "classification_error": 0.21212503043761596,
+            "ground_truth": false,
+            "predicted_fake": true,
+            "correct_prediction": false
+        },
+        {
+            "filename": "id0_id17_0007.mp4",
+            "mean_prediction": 0.5778454592361437,
+            "classification_error": 0.47784545923614374,
+            "ground_truth": true,
+            "predicted_fake": true,
+            "correct_prediction": true
+        },
+        {
+            "filename": "id0_id21_0000.mp4",
+            "mean_prediction": 0.7179112181233651,
+            "classification_error": 0.6179112181233651,
+            "ground_truth": true,
+            "predicted_fake": true,
+            "correct_prediction": true
+        },
+        {
+            "filename": "id11_0006.mp4",
+            "mean_prediction": 0.16941661201244337,
+            "classification_error": 0.06941661201244337,
+            "ground_truth": false,
+            "predicted_fake": true,
+            "correct_prediction": false
+        },
+        {
+            "filename": "id0_id16_0001.mp4",
+            "mean_prediction": 0.26702470248945914,
+            "classification_error": 0.16702470248945914,
+            "ground_truth": true,
+            "predicted_fake": true,
+            "correct_prediction": true
+        },
+        {
+            "filename": "id0_id17_0003.mp4",
+            "mean_prediction": 0.5898673191915879,
+            "classification_error": 0.4898673191915879,
+            "ground_truth": true,
+            "predicted_fake": true,
+            "correct_prediction": true
+        },
+        {
+            "filename": "id0_id23_0005.mp4",
+            "mean_prediction": 0.577949934689238,
+            "classification_error": 0.4779499346892381,
+            "ground_truth": true,
+            "predicted_fake": true,
+            "correct_prediction": true
+        },
+        {
+            "filename": "id12_0006.mp4",
+            "mean_prediction": 0.5322142773789101,
+            "classification_error": 0.43221427737891016,
+            "ground_truth": false,
+            "predicted_fake": true,
+            "correct_prediction": false
+        },
+        {
+            "filename": "id0_id17_0001.mp4",
+            "mean_prediction": 0.2885597828692552,
+            "classification_error": 0.1885597828692552,
+            "ground_truth": true,
+            "predicted_fake": true,
+            "correct_prediction": true
+        },
+        {
+            "filename": "id0_id16_0008.mp4",
+            "mean_prediction": 0.24778641052163278,
+            "classification_error": 0.14778641052163277,
+            "ground_truth": true,
+            "predicted_fake": true,
+            "correct_prediction": true
+        },
+        {
+            "filename": "id0_id21_0007.mp4",
+            "mean_prediction": 0.6885897555634324,
+            "classification_error": 0.5885897555634324,
+            "ground_truth": true,
+            "predicted_fake": true,
+            "correct_prediction": true
+        },
+        {
+            "filename": "id11_0005.mp4",
+            "mean_prediction": 0.2843736050906678,
+            "classification_error": 0.18437360509066777,
+            "ground_truth": false,
+            "predicted_fake": true,
+            "correct_prediction": false
+        },
+        {
+            "filename": "id0_id20_0000.mp4",
+            "mean_prediction": 0.7577305115953255,
+            "classification_error": 0.6577305115953255,
+            "ground_truth": true,
+            "predicted_fake": true,
+            "correct_prediction": true
+        },
+        {
+            "filename": "id11_0003.mp4",
+            "mean_prediction": 0.07694182590647258,
+            "classification_error": 0.023058174093527423,
+            "ground_truth": false,
+            "predicted_fake": false,
+            "correct_prediction": true
+        },
+        {
+            "filename": "id10_0008.mp4",
+            "mean_prediction": 0.3541610384235318,
+            "classification_error": 0.25416103842353177,
+            "ground_truth": false,
+            "predicted_fake": true,
+            "correct_prediction": false
+        },
+        {
+            "filename": "id0_id20_0004.mp4",
+            "mean_prediction": 0.5178921813470724,
+            "classification_error": 0.4178921813470724,
+            "ground_truth": true,
+            "predicted_fake": true,
+            "correct_prediction": true
+        },
+        {
+            "filename": "id13_0006.mp4",
+            "mean_prediction": 0.15518627196141835,
+            "classification_error": 0.05518627196141834,
+            "ground_truth": false,
+            "predicted_fake": true,
+            "correct_prediction": false
+        },
+        {
+            "filename": "id10_0009.mp4",
+            "mean_prediction": 0.26822842789128365,
+            "classification_error": 0.16822842789128364,
+            "ground_truth": false,
+            "predicted_fake": true,
+            "correct_prediction": false
+        },
+        {
+            "filename": "id12_0002.mp4",
+            "mean_prediction": 0.10668919278744982,
+            "classification_error": 0.00668919278744981,
+            "ground_truth": false,
+            "predicted_fake": true,
+            "correct_prediction": false
+        },
+        {
+            "filename": "id0_id20_0003.mp4",
+            "mean_prediction": 0.8014628137548395,
+            "classification_error": 0.7014628137548395,
+            "ground_truth": true,
+            "predicted_fake": true,
+            "correct_prediction": true
+        },
+        {
+            "filename": "id10_0004.mp4",
+            "mean_prediction": 0.19897309199086352,
+            "classification_error": 0.09897309199086352,
+            "ground_truth": false,
+            "predicted_fake": true,
+            "correct_prediction": false
+        },
+        {
+            "filename": "id11_0010.mp4",
+            "mean_prediction": 0.20447592074778553,
+            "classification_error": 0.10447592074778553,
+            "ground_truth": false,
+            "predicted_fake": true,
+            "correct_prediction": false
+        },
+        {
+            "filename": "id0_id21_0003.mp4",
+            "mean_prediction": 0.651991023768612,
+            "classification_error": 0.551991023768612,
+            "ground_truth": true,
+            "predicted_fake": true,
+            "correct_prediction": true
+        },
+        {
+            "filename": "id0_id16_0000.mp4",
+            "mean_prediction": 0.5118172490436127,
+            "classification_error": 0.4118172490436127,
+            "ground_truth": true,
+            "predicted_fake": true,
+            "correct_prediction": true
+        },
+        {
+            "filename": "id0_id1_0005.mp4",
+            "mean_prediction": 0.38400335920815354,
+            "classification_error": 0.28400335920815356,
+            "ground_truth": true,
+            "predicted_fake": true,
+            "correct_prediction": true
+        },
+        {
+            "filename": "id0_id23_0002.mp4",
+            "mean_prediction": 0.9199081836579901,
+            "classification_error": 0.8199081836579901,
+            "ground_truth": true,
+            "predicted_fake": true,
+            "correct_prediction": true
+        },
+        {
+            "filename": "id11_0002.mp4",
+            "mean_prediction": 0.20977241356188922,
+            "classification_error": 0.10977241356188921,
+            "ground_truth": false,
+            "predicted_fake": true,
+            "correct_prediction": false
+        },
+        {
+            "filename": "id13_0007.mp4",
+            "mean_prediction": 0.11206535406438392,
+            "classification_error": 0.012065354064383915,
+            "ground_truth": false,
+            "predicted_fake": true,
+            "correct_prediction": false
+        },
+        {
+            "filename": "id10_0006.mp4",
+            "mean_prediction": 0.23411155623885302,
+            "classification_error": 0.134111556238853,
+            "ground_truth": false,
+            "predicted_fake": true,
+            "correct_prediction": false
+        },
+        {
+            "filename": "id0_id20_0001.mp4",
+            "mean_prediction": 0.421555230878709,
+            "classification_error": 0.32155523087870896,
+            "ground_truth": true,
+            "predicted_fake": true,
+            "correct_prediction": true
+        },
+        {
+            "filename": "id13_0005.mp4",
+            "mean_prediction": 0.12533129162767895,
+            "classification_error": 0.025331291627678942,
+            "ground_truth": false,
+            "predicted_fake": true,
+            "correct_prediction": false
+        },
+        {
+            "filename": "id13_0000.mp4",
+            "mean_prediction": 0.08512554924370769,
+            "classification_error": 0.014874450756292318,
+            "ground_truth": false,
+            "predicted_fake": false,
+            "correct_prediction": true
+        },
+        {
+            "filename": "id0_id23_0000.mp4",
+            "mean_prediction": 0.7734013373883905,
+            "classification_error": 0.6734013373883905,
+            "ground_truth": true,
+            "predicted_fake": true,
+            "correct_prediction": true
+        },
+        {
+            "filename": "id0_id20_0009.mp4",
+            "mean_prediction": 0.6227315653420181,
+            "classification_error": 0.5227315653420181,
+            "ground_truth": true,
+            "predicted_fake": true,
+            "correct_prediction": true
+        },
+        {
+            "filename": "id0_id20_0007.mp4",
+            "mean_prediction": 0.7038341819076733,
+            "classification_error": 0.6038341819076734,
+            "ground_truth": true,
+            "predicted_fake": true,
+            "correct_prediction": true
+        },
+        {
+            "filename": "id0_0008.mp4",
+            "mean_prediction": 0.07405418645829433,
+            "classification_error": 0.02594581354170568,
+            "ground_truth": false,
+            "predicted_fake": false,
+            "correct_prediction": true
+        },
+        {
+            "filename": "id0_id1_0003.mp4",
+            "mean_prediction": 0.6764395687327509,
+            "classification_error": 0.5764395687327509,
+            "ground_truth": true,
+            "predicted_fake": true,
+            "correct_prediction": true
+        },
+        {
+            "filename": "id13_0002.mp4",
+            "mean_prediction": 0.24175055102587134,
+            "classification_error": 0.14175055102587134,
+            "ground_truth": false,
+            "predicted_fake": true,
+            "correct_prediction": false
+        },
+        {
+            "filename": "id10_0002.mp4",
+            "mean_prediction": 0.30596098064212995,
+            "classification_error": 0.20596098064212995,
+            "ground_truth": false,
+            "predicted_fake": true,
+            "correct_prediction": false
+        },
+        {
+            "filename": "id11_0004.mp4",
+            "mean_prediction": 0.1409563675345237,
+            "classification_error": 0.0409563675345237,
+            "ground_truth": false,
+            "predicted_fake": true,
+            "correct_prediction": false
+        },
+        {
+            "filename": "id0_id21_0002.mp4",
+            "mean_prediction": 0.7464676146641318,
+            "classification_error": 0.6464676146641318,
+            "ground_truth": true,
+            "predicted_fake": true,
+            "correct_prediction": true
+        },
+        {
+            "filename": "id0_id1_0002.mp4",
+            "mean_prediction": 0.7960256763550428,
+            "classification_error": 0.6960256763550429,
+            "ground_truth": true,
+            "predicted_fake": true,
+            "correct_prediction": true
+        },
+        {
+            "filename": "id0_id16_0009.mp4",
+            "mean_prediction": 0.48117309766146443,
+            "classification_error": 0.38117309766146446,
+            "ground_truth": true,
+            "predicted_fake": true,
+            "correct_prediction": true
+        },
+        {
+            "filename": "id11_0001.mp4",
+            "mean_prediction": 0.03329159262534716,
+            "classification_error": 0.06670840737465285,
+            "ground_truth": false,
+            "predicted_fake": false,
+            "correct_prediction": true
+        },
+        {
+            "filename": "id0_0002.mp4",
+            "mean_prediction": 0.08450297495267149,
+            "classification_error": 0.015497025047328514,
+            "ground_truth": false,
+            "predicted_fake": false,
+            "correct_prediction": true
+        },
+        {
+            "filename": "id0_0003.mp4",
+            "mean_prediction": 0.030516040319279115,
+            "classification_error": 0.0694839596807209,
+            "ground_truth": false,
+            "predicted_fake": false,
+            "correct_prediction": true
+        },
+        {
+            "filename": "id0_0004.mp4",
+            "mean_prediction": 0.01536145544745942,
+            "classification_error": 0.08463854455254058,
+            "ground_truth": false,
+            "predicted_fake": false,
+            "correct_prediction": true
+        },
+        {
+            "filename": "id0_id1_0001.mp4",
+            "mean_prediction": 0.2853070132808282,
+            "classification_error": 0.1853070132808282,
+            "ground_truth": true,
+            "predicted_fake": true,
+            "correct_prediction": true
+        },
+        {
+            "filename": "id11_0008.mp4",
+            "mean_prediction": 0.3779240811112091,
+            "classification_error": 0.27792408111120914,
+            "ground_truth": false,
+            "predicted_fake": true,
+            "correct_prediction": false
+        },
+        {
+            "filename": "id0_id16_0003.mp4",
+            "mean_prediction": 0.3715118886418225,
+            "classification_error": 0.2715118886418225,
+            "ground_truth": true,
+            "predicted_fake": true,
+            "correct_prediction": true
+        },
+        {
+            "filename": "id13_0008.mp4",
+            "mean_prediction": 0.15231341801905748,
+            "classification_error": 0.05231341801905748,
+            "ground_truth": false,
+            "predicted_fake": true,
+            "correct_prediction": false
+        },
+        {
+            "filename": "id13_0009.mp4",
+            "mean_prediction": 0.47498962813884466,
+            "classification_error": 0.3749896281388446,
+            "ground_truth": false,
+            "predicted_fake": true,
+            "correct_prediction": false
+        }
+    ],
+    "summary": {
+        "average_error": 0.28614712825080807,
+        "average_prediction": 0.3762128744729113,
+        "auc_score": 0.9332
+    }
+}

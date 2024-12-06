@@ -15,7 +15,7 @@ from utils.plugin_loader import PluginLoader
 import json
 from datetime import datetime
 import random
-
+import os
 from sklearn.metrics import roc_auc_score
 
 
@@ -38,19 +38,22 @@ mean = torch.tensor([0.485 * 255, 0.456 * 255, 0.406 * 255]).cuda().view(1, 3, 1
 std = torch.tensor([0.229 * 255, 0.224 * 255, 0.225 * 255]).cuda().view(1, 3, 1, 1, 1)
 
 # Configuration variables
-max_frame = 1000
+max_frame = 300
 
-max_videos = None
+#max_videos = 10
 
-real_dir = "/home/azureuser/AltFreezing/examples/dlc_cross_ff/dlc_cross_trimmed"
-fake_dir = "/home/azureuser/AltFreezing/examples/dlc_cross_ff/dlc_cross_processed"
+real_dir = "/home/azureuser/CelebDF/Celeb-real"
+fake_dir = "/home/azureuser/CelebDF/Celeb-synthesis"
 
 out_dir = "prediction"
 cfg_path = "i3d_ori.yaml"
-ckpt_path = "checkpoints/model.pth"
+
+ckpt_path = "checkpoints/best_zoom_model_acc_0.8376.pth"
+#ckpt_path = "checkpoints/best_ffdlc_model_acc_0.9792.pth"
+#ckpt_path = "checkpoints/stage_2_best_model.pth"
 optimal_threshold = 0.1
 
-def process_video(video_path, is_fake):
+def process_video(video_path, ground_truth_label):
     print(f"\nProcessing video: {os.path.basename(video_path)}")
     
     # Prepare output file
@@ -169,54 +172,33 @@ def process_video(video_path, is_fake):
 
     # Prepare clips for processing
     clips_for_video = []
-    clip_size = cfg.clip_size
-    pad_length = clip_size - 1
+    clip_size = 32 #cfg.clip_size
+    #pad_length = clip_size - 1
 
     # Create clips from the video
+    # Create sequential clips from valid frames
     for super_clip_idx, super_clip_size in enumerate(super_clips):
-        inner_index = list(range(super_clip_size))
+        valid_indices = [i for i in range(super_clip_size) if (super_clip_idx, i) in valid_frames]
         
-        valid_indices = [i for i in inner_index if (super_clip_idx, i) in valid_frames]
-        
-        if not valid_indices:
-            continue
-            
         if len(valid_indices) < clip_size:
-            if len(valid_indices) < 2:
-                print(f"Warning: Not enough valid frames ({len(valid_indices)}) to create clips")
-                continue
-                
-            post_module = valid_indices[1:-1][::-1] + valid_indices
-            l_post = len(post_module)
-            if l_post == 0:
-                print("Warning: Cannot create clips with zero frames")
-                continue
-                
-            post_module = post_module * (pad_length // l_post + 1)
-            post_module = post_module[:pad_length]
-
-            pre_module = valid_indices + valid_indices[1:-1][::-1]
-            l_pre = len(pre_module)
-            pre_module = pre_module * (pad_length // l_pre + 1)
-            pre_module = pre_module[-pad_length:]
-
-            valid_indices = pre_module + valid_indices + post_module
-
-        super_clip_size = len(valid_indices)
+            print(f"Warning: Not enough valid frames ({len(valid_indices)}) to create clips")
+            continue
         
-        frame_range = [
-            valid_indices[i : i + clip_size] 
-            for i in range(super_clip_size) 
-            if i + clip_size <= super_clip_size
-        ]
-        
-        for indices in frame_range:
-            clip = [(super_clip_idx, t) for t in indices]
-            if all((super_clip_idx, t) in valid_frames for t in indices):
-                clips_for_video.append(clip)
+        # Create sequential clips without padding
+        for i in range(0, len(valid_indices) - clip_size + 1):
+            current_indices = valid_indices[i:i + clip_size]
+            clip = [(super_clip_idx, t) for t in current_indices]
+            clips_for_video.append(clip)
+
+
 
     preds = []
     frame_res = {}
+
+
+
+
+
 
     print("Running predictions")
 
@@ -269,13 +251,13 @@ def process_video(video_path, is_fake):
 
     overall_mean_pred = np.mean(preds)
     classification_error = abs(optimal_threshold - overall_mean_pred)
-    is_fake = overall_mean_pred > optimal_threshold
+    predicted_fake = overall_mean_pred > optimal_threshold
 
     # Print immediate results
     print("\n--- Immediate Results ---")
     print(f"Mean prediction: {overall_mean_pred:.4f}")
     print(f"Classification error: {classification_error:.4f}")
-    print(f"Predicted class: {'FAKE' if is_fake else 'REAL'}")
+    print(f"Predicted class: {'FAKE' if predicted_fake else 'REAL'}")
     print("-" * 25)
 
 
@@ -283,12 +265,16 @@ def process_video(video_path, is_fake):
         'filename': os.path.basename(video_path),
         'mean_prediction': overall_mean_pred,
         'classification_error': classification_error,
-        'is_fake': is_fake,
-        'predicted_fake': overall_mean_pred > optimal_threshold,
-        'correct_prediction': (overall_mean_pred > optimal_threshold) == is_fake
+        'ground_truth': bool(ground_truth_label),  # Ground truth label from input
+        'predicted_fake': predicted_fake,
+        'correct_prediction': (predicted_fake == bool(ground_truth_label))
     }
 
     return result
+
+
+
+
 
 if __name__ == "__main__":
     # Initialize and load configuration
@@ -296,11 +282,44 @@ if __name__ == "__main__":
     cfg.update_with_yaml(cfg_path)
     cfg.freeze()
 
-    # Initialize and load the classifier
+
+    ###################
+
+    print("\nModel Loading Debug:")
+    checkpoint = torch.load(ckpt_path)
+
+    # Handle different save formats
+    if isinstance(checkpoint, dict) and 'model_state_dict' in checkpoint:
+        # New format with metadata
+        state_dict = checkpoint['model_state_dict']
+        print("Loading from checkpoint with metadata")
+    else:
+        # Old format with just state dict
+        state_dict = checkpoint
+        print("Loading from simple state dict")
+
+    # Initialize model 
     classifier = PluginLoader.get_classifier(cfg.classifier_type)()
+    print("\nModel Architecture:")
+    print(classifier)
+
+    # Load weights and move to GPU
+    classifier.load_state_dict(state_dict)
     classifier.cuda()
     classifier.eval()
-    classifier.load(ckpt_path)
+
+    # Debug loaded state
+    loaded_state = classifier.state_dict()
+    print("\nLoaded Model State:")
+    print(f"Number of parameters: {len(loaded_state)}")
+    print(f"First few keys: {list(loaded_state.keys())[:5]}")
+
+
+
+
+
+    #############
+
 
     # Initialize the face alignment function
     crop_align_func = FasterCropAlignXRay(cfg.imsize)
@@ -308,61 +327,51 @@ if __name__ == "__main__":
     # Prepare output directory
     os.makedirs(out_dir, exist_ok=True)
 
-    # Shuffle and alternate videos
-    real_videos = glob.glob(os.path.join(real_dir, "*.mp4"))
-    fake_videos = glob.glob(os.path.join(fake_dir, "*.mp4"))
+    # Load all videos from both directories
+    real_videos = sorted(glob.glob(os.path.join(real_dir, "*.mp4")))  #for quick testing append [:2], [:1]
+    fake_videos = sorted(glob.glob(os.path.join(fake_dir, "*.mp4")))
 
-    # Alternate real and fake videos
-    min_length = min(len(real_videos), len(fake_videos))
-    shuffled_videos = [val for pair in zip(real_videos[:min_length], fake_videos[:min_length]) for val in pair]
+    # Set the maximum number of samples from each directory while testing, for time saving
+    max_samples_per_class = 50  #
+    real_videos = real_videos[:max_samples_per_class]
+    fake_videos = fake_videos[:max_samples_per_class]
+    #################################################
 
-    # If one folder has more videos, append the remaining
-    if len(real_videos) > min_length:
-        shuffled_videos.extend(real_videos[min_length:])
-    elif len(fake_videos) > min_length:
-        shuffled_videos.extend(fake_videos[min_length:])
+    video_files = real_videos + fake_videos
+    ground_truth = [0] * len(real_videos) + [1] * len(fake_videos)
 
-    # Limit the number of videos to process
-    if max_videos:
-        shuffled_videos = shuffled_videos[:max_videos]
+    print(f"\nTotal Real Videos: {len(real_videos)}")
+    print(f"Total Fake Videos: {len(fake_videos)}")
+    print(f"Total Videos for Processing: {len(video_files)}\n")
 
-    # Update ground truth labels to match shuffled videos
-    video_files = shuffled_videos
-    ground_truth = [0 if video in real_videos else 1 for video in shuffled_videos]
-
-
+    # Ensure at least some videos are loaded
     if not video_files:
-        print(f"No .mp4 files found in {input_dir}")
+        print("No .mp4 files found in the specified directories.")
         exit(1)
-
 
     # Process all videos and collect results
     results = []
-    for i, (video_path, is_fake) in enumerate(zip(video_files, ground_truth), 1):
-        print(f"\nProcessing video {i}/{len(video_files)}")
-        result = process_video(video_path, is_fake)
+    for i, (video_path, ground_truth_label) in enumerate(zip(video_files, ground_truth), 1):
+        print(f"\nProcessing video {i}/{len(video_files)}: {os.path.basename(video_path)}")
+        result = process_video(video_path, ground_truth_label)  # Pass ground truth label
         if result:
             results.append(result)
+
 
     # Calculate AUC
     all_labels = []
     all_preds = []
     for result in results:
-        all_labels.append(int(result['is_fake']))
+        all_labels.append(int(result['ground_truth']))
         all_preds.append(result['mean_prediction'])
 
     auc_score = roc_auc_score(all_labels, all_preds)
-
-
-
 
     # Convert all numpy values to Python native types
     processed_results = []
     for result in results:
         processed_result = {k: convert_to_serializable(v) for k, v in result.items()}
         processed_results.append(processed_result)
-
-
 
     # Create final results dictionary
     final_results = {
@@ -382,11 +391,9 @@ if __name__ == "__main__":
         }
     }
 
-
-
     # Save results to JSON file
     timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
-    json_filename = os.path.join(out_dir, f'results_base_dlc_cross_{timestamp}.json')
+    json_filename = os.path.join(out_dir, f'results_zoom_stage2_cdf_thresh_pt1_{timestamp}.json')
 
     try:
         with open(json_filename, 'w') as f:
@@ -404,12 +411,12 @@ if __name__ == "__main__":
     print("-" * 80)
     print(f"{'Filename':<40} {'Mean Pred':<10} {'Class Error':<12} {'Predicted':<8}")
     print("-" * 80)
-    
+
     for result in sorted(results, key=lambda x: x['classification_error']):
-        print(f"{result['filename']:<40} {result['mean_prediction']:.4f}    {result['classification_error']:.4f}      {'FAKE' if result['is_fake'] else 'REAL'}")
-    
+        print(f"{result['filename']:<40} {result['mean_prediction']:.4f}    {result['classification_error']:.4f}      {'FAKE' if result['ground_truth'] else 'REAL'}")
+
     print("-" * 80)
-    
+
     # Calculate and print average error
     avg_error = np.mean([r['classification_error'] for r in results])
     avg_prediction = np.mean([r['mean_prediction'] for r in results])

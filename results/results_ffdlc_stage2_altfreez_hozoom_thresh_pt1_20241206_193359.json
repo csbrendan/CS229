@@ -1,0 +1,545 @@
+{
+    "metadata": {
+        "timestamp": "2024-12-06T19:33:59.258023",
+        "threshold": 0.1,
+        "total_videos": 66,
+        "successful_videos": 66,
+        "real_directory": "/home/azureuser/AltFreezing/examples/zoom_holdout_dataset/all/real",
+        "fake_directory": "/home/azureuser/AltFreezing/examples/zoom_holdout_dataset/all/fake"
+    },
+    "video_results": [
+        {
+            "filename": "chainlink_11_R.mp4",
+            "mean_prediction": 0.0970452423901,
+            "classification_error": 0.002954757609900008,
+            "ground_truth": false,
+            "predicted_fake": false,
+            "correct_prediction": true
+        },
+        {
+            "filename": "chainlink_12_R.mp4",
+            "mean_prediction": 0.03872350300402557,
+            "classification_error": 0.061276496995974435,
+            "ground_truth": false,
+            "predicted_fake": false,
+            "correct_prediction": true
+        },
+        {
+            "filename": "chainlink_17_R.mp4",
+            "mean_prediction": 0.06355725359298339,
+            "classification_error": 0.03644274640701661,
+            "ground_truth": false,
+            "predicted_fake": false,
+            "correct_prediction": true
+        },
+        {
+            "filename": "chainlink_19_R.mp4",
+            "mean_prediction": 0.06944196617237697,
+            "classification_error": 0.030558033827623038,
+            "ground_truth": false,
+            "predicted_fake": false,
+            "correct_prediction": true
+        },
+        {
+            "filename": "chainlink_1_R.mp4",
+            "mean_prediction": 0.1088804413519495,
+            "classification_error": 0.0088804413519495,
+            "ground_truth": false,
+            "predicted_fake": true,
+            "correct_prediction": false
+        },
+        {
+            "filename": "chainlink_3_R.mp4",
+            "mean_prediction": 0.10892411217882841,
+            "classification_error": 0.008924112178828408,
+            "ground_truth": false,
+            "predicted_fake": true,
+            "correct_prediction": false
+        },
+        {
+            "filename": "chainlink_5_R.mp4",
+            "mean_prediction": 0.0945564993851053,
+            "classification_error": 0.0054435006148947085,
+            "ground_truth": false,
+            "predicted_fake": false,
+            "correct_prediction": true
+        },
+        {
+            "filename": "chainlink_set1_10_R.mp4",
+            "mean_prediction": 0.03309057326468061,
+            "classification_error": 0.0669094267353194,
+            "ground_truth": false,
+            "predicted_fake": false,
+            "correct_prediction": true
+        },
+        {
+            "filename": "chainlink_set1_12_R.mp4",
+            "mean_prediction": 0.05206420484127054,
+            "classification_error": 0.04793579515872946,
+            "ground_truth": false,
+            "predicted_fake": false,
+            "correct_prediction": true
+        },
+        {
+            "filename": "chainlink_set1_13_R.mp4",
+            "mean_prediction": 0.11417367153110043,
+            "classification_error": 0.014173671531100426,
+            "ground_truth": false,
+            "predicted_fake": true,
+            "correct_prediction": false
+        },
+        {
+            "filename": "chainlink_set1_14_R.mp4",
+            "mean_prediction": 0.18689846349411837,
+            "classification_error": 0.08689846349411837,
+            "ground_truth": false,
+            "predicted_fake": true,
+            "correct_prediction": false
+        },
+        {
+            "filename": "chainlink_set1_2_R.mp4",
+            "mean_prediction": 0.1589178591378061,
+            "classification_error": 0.05891785913780609,
+            "ground_truth": false,
+            "predicted_fake": true,
+            "correct_prediction": false
+        },
+        {
+            "filename": "chainlink_set1_3_R.mp4",
+            "mean_prediction": 0.22680188271221421,
+            "classification_error": 0.1268018827122142,
+            "ground_truth": false,
+            "predicted_fake": true,
+            "correct_prediction": false
+        },
+        {
+            "filename": "chainlink_set1_5_R.mp4",
+            "mean_prediction": 0.04414456569309239,
+            "classification_error": 0.05585543430690761,
+            "ground_truth": false,
+            "predicted_fake": false,
+            "correct_prediction": true
+        },
+        {
+            "filename": "chainlink_set1_7_R.mp4",
+            "mean_prediction": 0.08750359857537988,
+            "classification_error": 0.012496401424620121,
+            "ground_truth": false,
+            "predicted_fake": false,
+            "correct_prediction": true
+        },
+        {
+            "filename": "chainlink_set1_9_R.mp4",
+            "mean_prediction": 0.03571746406945154,
+            "classification_error": 0.06428253593054847,
+            "ground_truth": false,
+            "predicted_fake": false,
+            "correct_prediction": true
+        },
+        {
+            "filename": "ian_real_1.mp4",
+            "mean_prediction": 0.1392331056809226,
+            "classification_error": 0.039233105680922586,
+            "ground_truth": false,
+            "predicted_fake": true,
+            "correct_prediction": false
+        },
+        {
+            "filename": "ian_real_2.mp4",
+            "mean_prediction": 0.42039449740201235,
+            "classification_error": 0.3203944974020123,
+            "ground_truth": false,
+            "predicted_fake": true,
+            "correct_prediction": false
+        },
+        {
+            "filename": "ian_real_3.mp4",
+            "mean_prediction": 0.2763624563120776,
+            "classification_error": 0.17636245631207761,
+            "ground_truth": false,
+            "predicted_fake": true,
+            "correct_prediction": false
+        },
+        {
+            "filename": "justin_real_1.mp4",
+            "mean_prediction": 0.4818927723789747,
+            "classification_error": 0.3818927723789747,
+            "ground_truth": false,
+            "predicted_fake": true,
+            "correct_prediction": false
+        },
+        {
+            "filename": "justin_real_2.mp4",
+            "mean_prediction": 0.5448396842940589,
+            "classification_error": 0.44483968429405896,
+            "ground_truth": false,
+            "predicted_fake": true,
+            "correct_prediction": false
+        },
+        {
+            "filename": "justin_real_3.mp4",
+            "mean_prediction": 0.708147027940129,
+            "classification_error": 0.608147027940129,
+            "ground_truth": false,
+            "predicted_fake": true,
+            "correct_prediction": false
+        },
+        {
+            "filename": "kristy_real_1.mp4",
+            "mean_prediction": 0.34745242640542273,
+            "classification_error": 0.24745242640542273,
+            "ground_truth": false,
+            "predicted_fake": true,
+            "correct_prediction": false
+        },
+        {
+            "filename": "kristy_real_2.mp4",
+            "mean_prediction": 0.5205383906798735,
+            "classification_error": 0.42053839067987353,
+            "ground_truth": false,
+            "predicted_fake": true,
+            "correct_prediction": false
+        },
+        {
+            "filename": "kristy_real_3.mp4",
+            "mean_prediction": 0.5060210435973224,
+            "classification_error": 0.4060210435973224,
+            "ground_truth": false,
+            "predicted_fake": true,
+            "correct_prediction": false
+        },
+        {
+            "filename": "paul1_real_1.mp4",
+            "mean_prediction": 0.17580459010354538,
+            "classification_error": 0.07580459010354537,
+            "ground_truth": false,
+            "predicted_fake": true,
+            "correct_prediction": false
+        },
+        {
+            "filename": "paul1_real_2.mp4",
+            "mean_prediction": 0.21052489442176092,
+            "classification_error": 0.11052489442176092,
+            "ground_truth": false,
+            "predicted_fake": true,
+            "correct_prediction": false
+        },
+        {
+            "filename": "paul1_real_3.mp4",
+            "mean_prediction": 0.08825231247951994,
+            "classification_error": 0.011747687520480068,
+            "ground_truth": false,
+            "predicted_fake": false,
+            "correct_prediction": true
+        },
+        {
+            "filename": "paul2_real_1.mp4",
+            "mean_prediction": 0.387643897137345,
+            "classification_error": 0.28764389713734495,
+            "ground_truth": false,
+            "predicted_fake": true,
+            "correct_prediction": false
+        },
+        {
+            "filename": "paul2_real_2.mp4",
+            "mean_prediction": 0.34325026605818354,
+            "classification_error": 0.24325026605818353,
+            "ground_truth": false,
+            "predicted_fake": true,
+            "correct_prediction": false
+        },
+        {
+            "filename": "paul2_real_3.mp4",
+            "mean_prediction": 0.1551835551082423,
+            "classification_error": 0.0551835551082423,
+            "ground_truth": false,
+            "predicted_fake": true,
+            "correct_prediction": false
+        },
+        {
+            "filename": "paul_real_1.mp4",
+            "mean_prediction": 0.7708466276526451,
+            "classification_error": 0.6708466276526451,
+            "ground_truth": false,
+            "predicted_fake": true,
+            "correct_prediction": false
+        },
+        {
+            "filename": "paul_real_2.mp4",
+            "mean_prediction": 0.665233314037323,
+            "classification_error": 0.565233314037323,
+            "ground_truth": false,
+            "predicted_fake": true,
+            "correct_prediction": false
+        },
+        {
+            "filename": "paula_real_1.mp4",
+            "mean_prediction": 0.3166278963527715,
+            "classification_error": 0.2166278963527715,
+            "ground_truth": false,
+            "predicted_fake": true,
+            "correct_prediction": false
+        },
+        {
+            "filename": "paula_real_2.mp4",
+            "mean_prediction": 0.19556469314465072,
+            "classification_error": 0.09556469314465071,
+            "ground_truth": false,
+            "predicted_fake": true,
+            "correct_prediction": false
+        },
+        {
+            "filename": "paula_real_3.mp4",
+            "mean_prediction": 0.17198342208137743,
+            "classification_error": 0.07198342208137742,
+            "ground_truth": false,
+            "predicted_fake": true,
+            "correct_prediction": false
+        },
+        {
+            "filename": "adam_sandler_deepfake.mp4",
+            "mean_prediction": 0.46944606265392447,
+            "classification_error": 0.36944606265392443,
+            "ground_truth": true,
+            "predicted_fake": true,
+            "correct_prediction": true
+        },
+        {
+            "filename": "alexis_ohanian_fake.mp4",
+            "mean_prediction": 0.3397542680284791,
+            "classification_error": 0.23975426802847907,
+            "ground_truth": true,
+            "predicted_fake": true,
+            "correct_prediction": true
+        },
+        {
+            "filename": "angelina_jolie_deepfake.mp4",
+            "mean_prediction": 0.6462674251719478,
+            "classification_error": 0.5462674251719478,
+            "ground_truth": true,
+            "predicted_fake": true,
+            "correct_prediction": true
+        },
+        {
+            "filename": "arno_deepfake.mp4",
+            "mean_prediction": 0.4778151724487543,
+            "classification_error": 0.3778151724487543,
+            "ground_truth": true,
+            "predicted_fake": true,
+            "correct_prediction": true
+        },
+        {
+            "filename": "austin_fake.mp4",
+            "mean_prediction": 0.9724249839782715,
+            "classification_error": 0.8724249839782715,
+            "ground_truth": true,
+            "predicted_fake": true,
+            "correct_prediction": true
+        },
+        {
+            "filename": "brad_pitt_deepfake.mp4",
+            "mean_prediction": 0.5483875547199888,
+            "classification_error": 0.4483875547199888,
+            "ground_truth": true,
+            "predicted_fake": true,
+            "correct_prediction": true
+        },
+        {
+            "filename": "chainlink_10_F.mp4",
+            "mean_prediction": 0.2863609047405782,
+            "classification_error": 0.18636090474057818,
+            "ground_truth": true,
+            "predicted_fake": true,
+            "correct_prediction": true
+        },
+        {
+            "filename": "chainlink_13_F.mp4",
+            "mean_prediction": 0.33318567934424376,
+            "classification_error": 0.23318567934424375,
+            "ground_truth": true,
+            "predicted_fake": true,
+            "correct_prediction": true
+        },
+        {
+            "filename": "chainlink_15_F.mp4",
+            "mean_prediction": 0.26812847228126324,
+            "classification_error": 0.16812847228126324,
+            "ground_truth": true,
+            "predicted_fake": true,
+            "correct_prediction": true
+        },
+        {
+            "filename": "chainlink_16_F.mp4",
+            "mean_prediction": 0.1732023547325904,
+            "classification_error": 0.0732023547325904,
+            "ground_truth": true,
+            "predicted_fake": true,
+            "correct_prediction": true
+        },
+        {
+            "filename": "chainlink_8_F.mp4",
+            "mean_prediction": 0.4160699114789454,
+            "classification_error": 0.31606991147894536,
+            "ground_truth": true,
+            "predicted_fake": true,
+            "correct_prediction": true
+        },
+        {
+            "filename": "chainlink_set1_11_F.mp4",
+            "mean_prediction": 0.2833396054366056,
+            "classification_error": 0.18333960543660557,
+            "ground_truth": true,
+            "predicted_fake": true,
+            "correct_prediction": true
+        },
+        {
+            "filename": "chainlink_set1_4_F.mp4",
+            "mean_prediction": 0.28166206156095247,
+            "classification_error": 0.18166206156095246,
+            "ground_truth": true,
+            "predicted_fake": true,
+            "correct_prediction": true
+        },
+        {
+            "filename": "chainlink_set1_6_F.mp4",
+            "mean_prediction": 0.27815244460416105,
+            "classification_error": 0.17815244460416105,
+            "ground_truth": true,
+            "predicted_fake": true,
+            "correct_prediction": true
+        },
+        {
+            "filename": "chainlink_set1_8_F.mp4",
+            "mean_prediction": 0.33049240381522693,
+            "classification_error": 0.23049240381522693,
+            "ground_truth": true,
+            "predicted_fake": true,
+            "correct_prediction": true
+        },
+        {
+            "filename": "dave_franco_deepfake.mp4",
+            "mean_prediction": 0.5750895741925364,
+            "classification_error": 0.4750895741925364,
+            "ground_truth": true,
+            "predicted_fake": true,
+            "correct_prediction": true
+        },
+        {
+            "filename": "diplo_deepfake.mp4",
+            "mean_prediction": 0.36592448577561787,
+            "classification_error": 0.2659244857756179,
+            "ground_truth": true,
+            "predicted_fake": true,
+            "correct_prediction": true
+        },
+        {
+            "filename": "elon_musk_deepfake.mp4",
+            "mean_prediction": 0.5606751471314732,
+            "classification_error": 0.4606751471314732,
+            "ground_truth": true,
+            "predicted_fake": true,
+            "correct_prediction": true
+        },
+        {
+            "filename": "fred_again_deepfake.mp4",
+            "mean_prediction": 0.35889717190072884,
+            "classification_error": 0.2588971719007288,
+            "ground_truth": true,
+            "predicted_fake": true,
+            "correct_prediction": true
+        },
+        {
+            "filename": "gula_deepfake.mp4",
+            "mean_prediction": 0.621147660850149,
+            "classification_error": 0.5211476608501491,
+            "ground_truth": true,
+            "predicted_fake": true,
+            "correct_prediction": true
+        },
+        {
+            "filename": "hassan_fake.mp4",
+            "mean_prediction": 0.9457724365321073,
+            "classification_error": 0.8457724365321073,
+            "ground_truth": true,
+            "predicted_fake": true,
+            "correct_prediction": true
+        },
+        {
+            "filename": "jason_statham_deepfake.mp4",
+            "mean_prediction": 0.415994975702027,
+            "classification_error": 0.31599497570202695,
+            "ground_truth": true,
+            "predicted_fake": true,
+            "correct_prediction": true
+        },
+        {
+            "filename": "jeff_bezos_deepfake.mp4",
+            "mean_prediction": 0.8296538903810721,
+            "classification_error": 0.7296538903810721,
+            "ground_truth": true,
+            "predicted_fake": true,
+            "correct_prediction": true
+        },
+        {
+            "filename": "justin_fake.mp4",
+            "mean_prediction": 0.9582043290138245,
+            "classification_error": 0.8582043290138245,
+            "ground_truth": true,
+            "predicted_fake": true,
+            "correct_prediction": true
+        },
+        {
+            "filename": "mark_zuckerberg_fake.mp4",
+            "mean_prediction": 0.64667640787075,
+            "classification_error": 0.54667640787075,
+            "ground_truth": true,
+            "predicted_fake": true,
+            "correct_prediction": true
+        },
+        {
+            "filename": "marty_fake.mp4",
+            "mean_prediction": 0.8619889727345219,
+            "classification_error": 0.7619889727345219,
+            "ground_truth": true,
+            "predicted_fake": true,
+            "correct_prediction": true
+        },
+        {
+            "filename": "olivia_rodrigo_deepfake.mp4",
+            "mean_prediction": 0.7431059424318789,
+            "classification_error": 0.6431059424318789,
+            "ground_truth": true,
+            "predicted_fake": true,
+            "correct_prediction": true
+        },
+        {
+            "filename": "other_fake.mp4",
+            "mean_prediction": 0.9929941852887472,
+            "classification_error": 0.8929941852887472,
+            "ground_truth": true,
+            "predicted_fake": true,
+            "correct_prediction": true
+        },
+        {
+            "filename": "taylor_swift_deepfake.mp4",
+            "mean_prediction": 0.7910632806861267,
+            "classification_error": 0.6910632806861268,
+            "ground_truth": true,
+            "predicted_fake": true,
+            "correct_prediction": true
+        },
+        {
+            "filename": "tom_holland_deepfake.mp4",
+            "mean_prediction": 0.5634291363693081,
+            "classification_error": 0.46342913636930816,
+            "ground_truth": true,
+            "predicted_fake": true,
+            "correct_prediction": true
+        }
+    ],
+    "summary": {
+        "average_error": 0.29505076832702226,
+        "average_prediction": 0.3830537132805977,
+        "auc_score": 0.8314814814814815
+    }
+}

@@ -42,12 +42,15 @@ max_frame = 300
 
 #max_videos = 10
 
-real_dir = "/home/azureuser/CelebDF/Celeb-real"
-fake_dir = "/home/azureuser/CelebDF/Celeb-synthesis"
+real_dir = "/home/azureuser/AltFreezing/examples/zoom_holdout_dataset/all/real"
+fake_dir = "/home/azureuser/AltFreezing/examples/zoom_holdout_dataset/all/fake"
 
 out_dir = "prediction"
 cfg_path = "i3d_ori.yaml"
-ckpt_path = "checkpoints/stage_2_best_model.pth"
+
+ckpt_path = "checkpoints/model.pth"
+#ckpt_path = "checkpoints/best_ffdlc_model_acc_0.9792.pth"
+#ckpt_path = "checkpoints/stage_2_best_model.pth"
 optimal_threshold = 0.1
 
 def process_video(video_path, ground_truth_label):
@@ -169,54 +172,33 @@ def process_video(video_path, ground_truth_label):
 
     # Prepare clips for processing
     clips_for_video = []
-    clip_size = cfg.clip_size
-    pad_length = clip_size - 1
+    clip_size = 32 #cfg.clip_size
+    #pad_length = clip_size - 1
 
     # Create clips from the video
+    # Create sequential clips from valid frames
     for super_clip_idx, super_clip_size in enumerate(super_clips):
-        inner_index = list(range(super_clip_size))
+        valid_indices = [i for i in range(super_clip_size) if (super_clip_idx, i) in valid_frames]
         
-        valid_indices = [i for i in inner_index if (super_clip_idx, i) in valid_frames]
-        
-        if not valid_indices:
-            continue
-            
         if len(valid_indices) < clip_size:
-            if len(valid_indices) < 2:
-                print(f"Warning: Not enough valid frames ({len(valid_indices)}) to create clips")
-                continue
-                
-            post_module = valid_indices[1:-1][::-1] + valid_indices
-            l_post = len(post_module)
-            if l_post == 0:
-                print("Warning: Cannot create clips with zero frames")
-                continue
-                
-            post_module = post_module * (pad_length // l_post + 1)
-            post_module = post_module[:pad_length]
-
-            pre_module = valid_indices + valid_indices[1:-1][::-1]
-            l_pre = len(pre_module)
-            pre_module = pre_module * (pad_length // l_pre + 1)
-            pre_module = pre_module[-pad_length:]
-
-            valid_indices = pre_module + valid_indices + post_module
-
-        super_clip_size = len(valid_indices)
+            print(f"Warning: Not enough valid frames ({len(valid_indices)}) to create clips")
+            continue
         
-        frame_range = [
-            valid_indices[i : i + clip_size] 
-            for i in range(super_clip_size) 
-            if i + clip_size <= super_clip_size
-        ]
-        
-        for indices in frame_range:
-            clip = [(super_clip_idx, t) for t in indices]
-            if all((super_clip_idx, t) in valid_frames for t in indices):
-                clips_for_video.append(clip)
+        # Create sequential clips without padding
+        for i in range(0, len(valid_indices) - clip_size + 1):
+            current_indices = valid_indices[i:i + clip_size]
+            clip = [(super_clip_idx, t) for t in current_indices]
+            clips_for_video.append(clip)
+
+
 
     preds = []
     frame_res = {}
+
+
+
+
+
 
     print("Running predictions")
 
@@ -303,41 +285,15 @@ if __name__ == "__main__":
 
     ###################
 
-
-    # Model loading and debugging
-    print("\nModel Loading Debug:")
-    checkpoint = torch.load(ckpt_path)
-
-    # Debug checkpoint contents
-    if isinstance(checkpoint, dict):
-        print(f"Checkpoint type: Dictionary")
-        #print(f"Keys: {checkpoint.keys()}")
-        if 'state_dict' in checkpoint:
-            state_dict = checkpoint['state_dict']
-            print(f"Number of parameters: {len(state_dict)}")
-        else:
-            state_dict = checkpoint
-    else:
-        print(f"Checkpoint type: {type(checkpoint)}")
-        state_dict = checkpoint
-
-    # Initialize model 
+    # Initialize and load the classifier
     classifier = PluginLoader.get_classifier(cfg.classifier_type)()
-    print("\nModel Architecture:")
-    #print(classifier)
-
-    # Load weights and move to GPU
-    classifier.load_state_dict(state_dict)
     classifier.cuda()
     classifier.eval()
+    classifier.load(ckpt_path)
 
-    # Debug loaded state
-    loaded_state = classifier.state_dict()
-    print("\nLoaded Model State:")
-    print(f"Number of parameters: {len(loaded_state)}")
-    print(f"First few keys: {list(loaded_state.keys())[:5]}")
 
     #############
+
 
     # Initialize the face alignment function
     crop_align_func = FasterCropAlignXRay(cfg.imsize)
@@ -346,13 +302,13 @@ if __name__ == "__main__":
     os.makedirs(out_dir, exist_ok=True)
 
     # Load all videos from both directories
-    real_videos = sorted(glob.glob(os.path.join(real_dir, "*.mp4")))
+    real_videos = sorted(glob.glob(os.path.join(real_dir, "*.mp4")))  #for quick testing append [:2], [:1]
     fake_videos = sorted(glob.glob(os.path.join(fake_dir, "*.mp4")))
 
     # Set the maximum number of samples from each directory while testing, for time saving
-    max_samples_per_class = 50  #for testing purps
-    real_videos = real_videos[:max_samples_per_class]
-    fake_videos = fake_videos[:max_samples_per_class]
+    #max_samples_per_class = 1  #
+    #real_videos = real_videos[:max_samples_per_class]
+    #fake_videos = fake_videos[:max_samples_per_class]
     #################################################
 
     video_files = real_videos + fake_videos
@@ -411,7 +367,7 @@ if __name__ == "__main__":
 
     # Save results to JSON file
     timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
-    json_filename = os.path.join(out_dir, f'results_stage2_cdf_thresh_pt1_300frames{timestamp}.json')
+    json_filename = os.path.join(out_dir, f'results_base_eval_hozoom_thresh_pt1_{timestamp}.json')
 
     try:
         with open(json_filename, 'w') as f:

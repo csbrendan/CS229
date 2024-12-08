@@ -4,7 +4,7 @@
 # Adapting Deepfake Detection to Video Conferencing: Domain-Specific Augmentation and Targeted Model Fine-tuning
 
 ## Paper
-https://github.com/csbrendan/CS229/blob/main/paper/CS229_Project.pdf
+https://github.com/csbrendan/CS229/blob/main/paper/CS229_Proj_Final.pdf
 
 ## Poster
 https://github.com/csbrendan/CS229/blob/main/poster/CS229_Project_Poster_Final.pdf

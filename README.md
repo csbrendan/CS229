@@ -1,8 +1,7 @@
 # CS229 Machine Learning with Andrew Ng
 
 
-# Detecting Deepfakes in Video Conferencing Scenarios: A Study on
-Domain-Specific Challenges and Model Adaptations
+# Detecting Deepfakes in Video Conferencing Scenarios: A Study on Domain-Specific Challenges and Model Adaptations
 
 ## Paper
 https://github.com/csbrendan/CS229/blob/main/paper/CS229_PROJ_FINAL.pdf

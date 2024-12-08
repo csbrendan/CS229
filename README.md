@@ -1,7 +1,8 @@
 # CS229 Machine Learning with Andrew Ng
 
 
-# Adapting Deepfake Detection to Video Conferencing: Domain-Specific Augmentation and Targeted Model Fine-tuning
+# Detecting Deepfakes in Video Conferencing Scenarios: A Study on
+Domain-Specific Challenges and Model Adaptations
 
 ## Paper
 https://github.com/csbrendan/CS229/blob/main/paper/CS229_PROJ_FINAL.pdf
@@ -18,14 +19,14 @@ https://youtu.be/PYhsdQp6KhM
 - PyTorch
 - FaceForensics++
 - Celebrity Deepfake
+- DeepLiveCam
 - AltFreezing
-- Deep Live Cam
 
 
 
 ## Project Overview ##
 
-This project aims to detect deepfake videos in video conferences using a customized SOTA deep learning model. I leverage my own dataset and the FaceForensics dataset for training and evaluation.
+This project aims to detect deepfake videos in video conferences using a customized SOTA deep learning model. I leverage my own dataset and the FaceForensics and Celeb-DF datasets for training and evaluation.
 
 
 
@@ -42,7 +43,7 @@ I utilize a deep neural network architecture, [AltFreezing](https://github.com/Z
 
 **Evaluation**
 
-The model is evaluated on a held-out test set from the FaceForensics dataset and my custom dataset, measuring its accuracy in detecting deepfake videos.
+The model is evaluated on a held-out test set from my custom Zoom dataset manipulated with Deep Live Cam.
 
 
 ## To Run Experiments
@@ -66,8 +67,3 @@ To perform supervise fine-tuning:
      ```
 
 
-**Future Work**
-
-* Explore advanced techniques like adversarial training to improve robustness against adversarial attacks.
-* Investigate the use of attention mechanisms to focus on key regions of the face.
-* Integrate explainability via visualizations such as heatmaps.

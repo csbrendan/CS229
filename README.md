@@ -45,24 +45,6 @@ I utilize a deep neural network architecture, [AltFreezing](https://github.com/Z
 The model is evaluated on a held-out test set from my custom Zoom dataset manipulated with Deep Live Cam.
 
 
-## To Run Experiments
 
-To perform supervise fine-tuning:
-
-1. **Data Preparation:**
-2. 
-   * Download and process the FaceForensics dataset using the provided script:
-     ```bash
-     python faceforensics_download_v4.py
-     ```
-3. **Model Training:**
-   * Fine-tune the model on a custom augmented dataset:
-     ```bash
-     python finetune_augment.py
-     ```
-   * Or, fine-tune the model on a custom dataset without augmentation:
-     ```bash
-     python finetune_custom_data.py
-     ```
 
 

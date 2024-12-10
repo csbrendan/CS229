@@ -35,10 +35,15 @@ This project aims to detect deepfake videos in video conferences using a customi
 
 I utilize a deep neural network architecture, [AltFreezing](https://github.com/ZhendongWang6/AltFreezing), to extract relevant features from video frames. The model is fine-tuned on custom datasets for adaptation and to improve performance.
 
+* **DeepLiveCam:** This is a real-time face swapping tool used to generate manipulated video content: [Deep-Live-Cam](https://github.com/hacksider/Deep-Live-Cam)
 
 **Dataset**
 
 * **FaceForensics:** This dataset contains a large collection of real and fake videos, providing a rich source of training data: [FaceForensics++](https://github.com/ondyari/FaceForensics)
+
+
+* **Celeb-DF:** This dataset consists of high-quality celebrity deepfake videos and their original counterparts: [Celeb-DeepfakeForensics](https://github.com/yuezunli/celeb-deepfakeforensics)
+
 
 **Evaluation**
 

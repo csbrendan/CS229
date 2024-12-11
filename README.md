@@ -10,7 +10,7 @@ https://github.com/csbrendan/CS229/blob/main/paper/CS229_PROJ_FINAL.pdf
 https://github.com/csbrendan/CS229/blob/main/poster/CS229_Project_Poster.pdf
 
 ## Video
-https://youtu.be/PYhsdQp6KhM
+[https://www.youtube.com/watch?v=rNlEeR-ge5A](https://www.youtube.com/watch?v=rNlEeR-ge5A)
 
 ## Requirements
 
